@@ -548,6 +548,29 @@ code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: .9e
 .semester-card ul { padding-left: 1.1rem; list-style: disc; }
 .semester-card li { font-size: .93rem; color: #444; padding: .25rem 0; }
 
+/* ===== PDF PAGE ===== */
+.pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.pdf-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.pdf-viewer {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border: none;
+  display: block;
+}
+
 /* ===== FOOTER ===== */
 #site-footer {
   background: var(--primary-dark);
