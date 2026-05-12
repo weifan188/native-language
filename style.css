@@ -375,8 +375,9 @@ code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: .9e
   font-weight: 700;
   letter-spacing: .04em;
 }
-.act-badge.teacher { background: #e3f2fd; color: #0d47a1; }
-.act-badge.student { background: #fce4ec; color: #880e4f; }
+.act-badge.teacher  { background: #e3f2fd; color: #0d47a1; }
+.act-badge.student  { background: #fce4ec; color: #880e4f; }
+.act-badge.festival { background: #f3e5f5; color: #6a1b9a; }
 
 .activity-content {
   display: grid;
@@ -469,6 +470,76 @@ code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: .9e
 .video-placeholder span { font-size: 3rem; margin-bottom: .5rem; }
 .video-placeholder p { font-size: .88rem; line-height: 1.6; }
 
+/* ===== PURPOSE GRID (首頁實施目的) ===== */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.purpose-item {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.purpose-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.purpose-item p { font-size: .93rem; color: #444; line-height: 1.7; }
+
+/* ===== BINDING TABLE (綁課安排) ===== */
+.grade-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 1.5rem 0 .75rem;
+}
+.binding-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== SEMESTER CARDS (課程亮點成果發表) ===== */
+.semester-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.semester-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.semester-card.upper { border-top: 4px solid #1565c0; }
+.semester-card.lower { border-top: 4px solid var(--accent); }
+.semester-label {
+  display: inline-block;
+  padding: .25rem .85rem;
+  border-radius: 99px;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+.semester-card.lower .semester-label { background: #fff8e1; color: #e65100; }
+.semester-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: .75rem; }
+.semester-card ul { padding-left: 1.1rem; list-style: disc; }
+.semester-card li { font-size: .93rem; color: #444; padding: .25rem 0; }
+
 /* ===== FOOTER ===== */
 #site-footer {
   background: var(--primary-dark);
@@ -508,4 +579,7 @@ code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: .9e
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .video-grid { grid-template-columns: 1fr; }
+  .binding-wrap { grid-template-columns: 1fr; }
+  .semester-grid { grid-template-columns: 1fr; }
+  .purpose-grid { grid-template-columns: 1fr; }
 }
